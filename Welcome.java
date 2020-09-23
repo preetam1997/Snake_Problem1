@@ -15,7 +15,14 @@ public class Welcome{
 	}
 
 
+	public static int roll_dice(){
+	
+		System.out.println("Rolling Dice ............");
+		double dice_num =1+ (Math.floor(Math.random()*10)%6);
+		System.out.println("You got " + dice_num);
+		return (int)dice_num;
 
+	}
 
 
 }
