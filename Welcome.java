@@ -26,21 +26,24 @@ public class Welcome{
 				System.out.println("Choice " + choice1);	
 				switch(choice1){
 					case NO_PLAY :  curr_pos1 = PLAYER1_START;
+							flag = 2;
 							break;						
 					case LADDER : curr_pos1 = PLAYER1_START + dice1;
 							if(curr_pos1>100)
 								curr_pos1 = PLAYER1_START;
+							flag = 1;
 							break;	
 						
 					case SNAKE : curr_pos1 = PLAYER1_START - dice1;
 							if(curr_pos1<0)
 								curr_pos1 = 0;
+							flag = 2;
 							break;	
 
 				
 				}
 				PLAYER1_START = curr_pos1;
-				flag = 2;
+				
 				System.out.println("Player Position " + PLAYER1_START);
 			}
 
@@ -51,21 +54,24 @@ public class Welcome{
 				System.out.println("Choice " + choice2);	
 				switch(choice2){
 					case NO_PLAY :  curr_pos2 = PLAYER2_START;
+							flag = 1;
 							break;						
 					case LADDER : curr_pos2 = PLAYER2_START + dice2;
 							if(curr_pos2>100)
 								curr_pos2 = PLAYER1_START;
+							flag = 2;
 							break;	
 						
 					case SNAKE : curr_pos2 = PLAYER2_START - dice2;
 							if(curr_pos2<0)
 								curr_pos2 = 0;
+							flag = 1;
 							break;	
 
 				
 				}
 				PLAYER2_START = curr_pos2;
-				flag = 1;
+				
 				System.out.println("Player Position " + PLAYER2_START);
 				
 				}
